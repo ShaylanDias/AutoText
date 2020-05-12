@@ -1,19 +1,27 @@
 import pyautogui
 import sys
 import time
+import argparse
 
-args = sys.argv[1:]
-time_delay = 3
+parser = argparse.ArgumentParser()
+parser.add_argument('filename')
+parser.add_argument('-t', required=False, type=int)
+parser.add_argument('--byline', action='store_true', required=False)
 
-if len(args) != 1:
-	print('Please enter exactly one filename.')
-	exit()
+args = parser.parse_args()
+time_delay = 3 if args.t is None else args.t
+by_line = args.byline
 
-with open(args[0]) as file:
+with open(args.filename) as file:
 	time.sleep(time_delay)
 	while True: 
 		line = file.readline() 
 		if not line: 
 			break
-		pyautogui.write(line)	
-		pyautogui.press("enter")
+		if not by_line:
+			for blob in line.split():
+				pyautogui.write(blob)	
+				pyautogui.press("enter")
+		else:
+			pyautogui.write(line)	
+			pyautogui.press("enter")
