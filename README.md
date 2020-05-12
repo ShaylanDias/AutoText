@@ -1,7 +1,7 @@
 
 # AutoType
 
-This is a simple script which takes in a text file argument and reads the file line-by-line, typing it into the current in focus window on your machine (very useful for texting a friend the entire script of The Bee Movie for example).  
+This is a simple script which takes in a text file argument and reads the file line-by-line, typing it into the current in focus window on your machine (very useful for texting a friend song lyrics or a movie script line by line as a prank).  
 
 1. Make sure you have a valid Python 3 install with pip package manager!
 2. Install the dependencies of the script with `pip install -r requirements.txt`
