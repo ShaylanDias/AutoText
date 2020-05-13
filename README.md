@@ -2,6 +2,7 @@
 
 Two sets of scripts for messing with people. Both are ways of reading out a file either line-by-line or word-by-word into another application. AutoText will automatically send using Messages in the background on Mac. AutoType can be used to send using any messaging application, but you will have to navigate into the window and stay there while it runs.
 Setup:
+
 1. Make sure you have a valid Python 3 install with pip package manager!
 2. Install the dependencies of the script with `pip install -r requirements.txt`
 
